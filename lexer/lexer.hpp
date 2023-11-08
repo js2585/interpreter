@@ -25,7 +25,7 @@ private:
     void identifier();
     bool isAlphaNumeric(char c);
 
-    std::unordered_map<std::string, TokenType> keywords = {
+    const std::unordered_map<std::string, TokenType> keywords = {
         {"and", TokenType::AND},
         {"class", TokenType::CLASS},
         {"else", TokenType::ELSE},
