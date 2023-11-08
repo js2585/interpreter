@@ -1,5 +1,5 @@
 #include "lexer.hpp"
-#include "../happy.hpp"
+#include "../main.hpp"
 Lexer::Lexer(std::string source) : source{ source }
 {
 }

@@ -7,9 +7,9 @@ class Lexer
 private:
     std::string source;
     std::vector<Token> tokens;
-    int start{ 0 };
-    int current{ 0 };
-    int line{ 1 };
+    int start = 0;
+    int current = 0;
+    int line = 0;
     void scanToken();
     char advance();
     void addToken(TokenType type);
@@ -25,7 +25,7 @@ private:
     void identifier();
     bool isAlphaNumeric(char c);
 
-    const std::unordered_map<std::string, TokenType> keywords{
+    std::unordered_map<std::string, TokenType> keywords = {
         {"and", TokenType::AND},
         {"class", TokenType::CLASS},
         {"else", TokenType::ELSE},

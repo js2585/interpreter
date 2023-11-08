@@ -1,7 +1,7 @@
 #include <iostream>
 #include "lexer/lexer.hpp"
 #include "token/token.hpp"
-#include "happy.hpp"
+#include "main.hpp"
 
 bool hadError = false;
 
@@ -33,6 +33,6 @@ void report(int line, std::string where, std::string message)
 
 int main()
 {
-
+    run("if (i > j) { print(\"Hello\")}");
     return 0;
 };
