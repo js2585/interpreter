@@ -9,7 +9,7 @@ Token::Token(TokenType type, std::string lexeme, std::any literal, int line) :
 std::ostream& operator<<(std::ostream& os, const Token& obj)
 {
     // token type has no string form so idk how to print
-    os << static_cast<int>(obj.type) << " " << obj.lexeme << " " << obj.literalToString();
+    os << obj.toString();
     return os;
 };
 
@@ -24,4 +24,9 @@ std::string Token::literalToString() const
     default:
         return "";
     }
+}
+
+std::string Token::toString() const
+{
+    return std::to_string(static_cast<int>(type)) + " " + lexeme + " " + literalToString();
 }
