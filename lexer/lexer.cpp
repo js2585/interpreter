@@ -115,7 +115,7 @@ void Lexer::addToken(TokenType type)
     addToken(type, "");
 }
 
-void Lexer::addToken(TokenType type, std::string literal)
+void Lexer::addToken(TokenType type, std::any literal)
 {
     std::string text = source.substr(start, current - start);
     tokens.push_back(Token(type, text, literal, line));
@@ -183,7 +183,7 @@ void Lexer::number()
             advance();
         }
     }
-    addToken(TokenType::NUMBER, source.substr(start, current - start));
+    addToken(TokenType::NUMBER, std::stod(source.substr(start, current - start)));
 }
 
 char Lexer::peekNext()

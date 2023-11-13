@@ -33,6 +33,6 @@ void report(int line, std::string where, std::string message)
 
 int main()
 {
-    run("if (i > j) { print(\"Hello\")}");
+    run("if (i > 3) { print(\"Hello\")}");
     return 0;
 };
