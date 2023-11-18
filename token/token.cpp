@@ -8,7 +8,6 @@ Token::Token(TokenType type, std::string lexeme, std::any literal, int line) :
 
 std::ostream& operator<<(std::ostream& os, const Token& obj)
 {
-    // token type has no string form so idk how to print
     os << obj.toString();
     return os;
 };
